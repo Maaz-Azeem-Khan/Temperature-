@@ -3,15 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Temperature Converter</title>
+    <style>
+      /* General Body Styling */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      /* Main Div Styling */
+      #mainDiv {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      #mainDiv:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Header Styling */
+      #temprature h4 {
+        margin: 0;
+        font-size: 28px;
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      /* Styling for the input divs */
+      #div1 {
+        margin-top: 20px;
+      }
+
+      #div2, #div3 {
+        margin-bottom: 15px;
+      }
+
+      /* Input Field Styling */
+      input[type="number"] {
+        width: 90%;
+        padding: 12px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #fafafa;
+        transition: all 0.3s ease;
+      }
+
+      input[type="number"]:focus {
+        border-color: #4CAF50;
+        background-color: #e8f5e9;
+        
+      }
+
+      input[type="number"]:hover {
+        border-color: #81c784;
+      }
+
+      /* Button Styling */
+      #btn1 {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      #btn1:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      #btn1:active {
+        background-color: #388e3c;
+        transform: scale(1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        #mainDiv {
+          width: 90%;
+          padding: 20px;
+        }
+
+        input[type="number"] {
+          width: 100%;
+        }
+
+        #btn1 {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="mainDiv">
-      <div id="temprature"><h4>Temprature</h4></div>
+      <div id="temprature"><h4>Temperature Converter</h4></div>
       <div id="div1">
-        <div id="div2"><input id="input1" type="number" />Celsius</div>
-        <div id="div3"><input id="input2" type="number" />Fahrenheit</div>
+        <div id="div2"><input id="input1" type="number" placeholder="Enter Celsius" />Celsius</div>
+        <div id="div3"><input id="input2" type="number" placeholder="Enter Fahrenheit" />Fahrenheit</div>
       </div>
       <div id="button"><button id="btn1">Convert</button></div>
     </div>
@@ -24,3 +133,4 @@
     <script src="./function.js"></script>
   </body>
 </html>
+

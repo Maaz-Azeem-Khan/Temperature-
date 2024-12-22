@@ -9,6 +9,7 @@ $("#btn1").click(function convertTemperature() {
     isNaN(fahrenheitValue)
   ) {
     alert("Invalid input");
+    return;
   }
 
   if (celsiusValue !== "") {
