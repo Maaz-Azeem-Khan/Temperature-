@@ -3,12 +3,14 @@ $("#btn1").click(function convertTemperature() {
 
   let fahrenheitValue = document.getElementById("input2").value;
 
-  if (
-    (celsiusValue === "" && fahrenheitValue === "") ||
-    isNaN(celsiusValue) ||
-    isNaN(fahrenheitValue)
-  ) {
-    alert("Invalid input");
+  if (celsiusValue === "" && fahrenheitValue === "") {
+    alert("Please enter a value in either Celsius or Fahrenheit.");
+    return;
+  }
+
+  // Handle invalid inputs (non-numeric values)
+  if ((celsiusValue !== "" && isNaN(celsiusValue)) || (fahrenheitValue !== "" && isNaN(fahrenheitValue))) {
+    alert("Invalid input. Please enter numeric values.");
     return;
   }
 
